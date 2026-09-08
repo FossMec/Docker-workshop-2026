@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FOSSMEC Registration Demo</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">FOSSMEC Docker Workshop</p>
+      <h1>Registration Demo</h1>
+      <p class="subtitle">
+        A tiny app showing the path from browser → Express → MongoDB.
+      </p>
+    </header>
+
+    <section class="card">
+      <div class="card-heading">
+        <div>
+          <p class="section-kicker">Step 1</p>
+          <h2>Register a mock user</h2>
+        </div>
+      </div>
+
+      <p class="hint">Use fake information only. Do not enter a real password.</p>
+
+      <form id="registration-form">
+        <label>
+          Name
+          <input id="name" name="name" maxlength="80" placeholder="Demo Student" required>
+        </label>
+
+        <label>
+          Email
+          <input id="email" name="email" type="email" maxlength="120" placeholder="student@example.com" required>
+        </label>
+
+        <label>
+          Password
+          <input id="password" name="password" type="password" minlength="4" maxlength="80" placeholder="docker123" required>
+        </label>
+
+        <button type="submit">Register</button>
+      </form>
+
+      <p id="message" class="message" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">Step 2</p>
+          <h2>Registrations</h2>
+        </div>
+        <button id="refresh" class="secondary" type="button">Refresh</button>
+      </div>
+
+      <div id="registrations" class="registrations">
+        <p class="empty">Loading...</p>
+      </div>
+    </section>
+
+    <section class="card workshop-note">
+      <p class="section-kicker">Step 3</p>
+      <h2>Open Mongo Express</h2>
+      <p>
+        Open <a href="http://localhost:8080" target="_blank" rel="noreferrer">http://localhost:8080</a>
+        to inspect the MongoDB database, create collections, and add documents.
+      </p>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
